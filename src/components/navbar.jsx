@@ -36,6 +36,10 @@ function Navbar({ darkMode, setDarkMode }) {
 
             {/*others to the right */}
             <div className="relative flex flex-1 justify-end">
+                <button onclick={() => alert('Cart clicked!')} className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 border-none bg-transparent cursor-pointer">
+                    🛒 Cart
+                </button>
+
                 <button
                     onClick={() => setSettingsOpen(!settingsOpen)}
                     className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 border-none bg-transparent cursor-pointer">
@@ -44,10 +48,13 @@ function Navbar({ darkMode, setDarkMode }) {
                         ▼
                     </span>
                 </button>
+                <button onClick={() => alert('Profile clicked!')} className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 border-none bg-transparent cursor-pointer">
+                    👤 Profile
+                </button>
 
                 {/* Dropdown */}
                 {settingsOpen && (
-                    <div className="absolute top-12 right-0 z-50 w-48 rounded-lg border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                    <div className="absolute right-0 top-12 z-50 w-48 rounded-lg border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
 
                         {/* Dark mode toggle row */}
                         <div className="flex items-center justify-between px-4 py-3">
